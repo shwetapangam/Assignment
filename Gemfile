@@ -32,6 +32,8 @@ gem 'bootstrap-sass'
 
 gem 'omniauth-github', '~> 1.1', '>= 1.1.2'
 
+gem 'omniauth-twitter'
+
 gem 'activerecord-session_store', '~> 1.0'
 
 gem 'dotenv-rails'
