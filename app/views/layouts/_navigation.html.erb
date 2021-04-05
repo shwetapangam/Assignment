@@ -14,7 +14,9 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to 'Home', root_path %></li>
         <% if current_user %>
-        <input type="text" id="current_user_name" value=<%=current_user.name%> />
+        <input type="hidden" id="current_user_name" value=<%=current_user.name%> />
+        <input type="hidden" id="current_user_id" value=<%=current_user.id%> />
+        <input type="hidden" id="current_user_provider" value=<%=current_user.provider%> />
         <li>Signed in as <%= current_user.name %></li>
         <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
         <% else %>
