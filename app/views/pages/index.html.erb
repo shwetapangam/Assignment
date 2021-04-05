@@ -1,4 +1,14 @@
 <div class="jumbotron">
-  <h1>Its an demo app!</h1>
-  <p>Thanks for checking us out!</p>
+	<h1>Its an demo app!</h1>
+	<p>Thanks for checking us out!</p>
+
+	<% if current_user && current_user.provider == 'github' %>
+	<p> Github followers count<span class="badge" id="git_follower_count"></span></p>
+	<p> Github repo count<span class="badge" id="git_repo_count"></span></p>
+	<% end %>
+
+	<% if current_user && current_user.provider == 'twitter' %>
+	<p> Twitter followers count<span class="badge" id="twitter_follower_count"></span></p>
+	<p> Twitter repo count<span class="badge" id="twitter_repo_count"></span></p>
+	<% end %>
 </div>
